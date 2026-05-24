@@ -299,6 +299,55 @@
   }
   .reg-form-embed iframe { display: block; border-radius: 16px; }
 
+
+  /* RULEBOOK */
+  .rulebook-card {
+    max-width: 780px; margin: 0 auto;
+    background: linear-gradient(135deg, #1a003a 0%, #3b0764 50%, #004b78 100%);
+    border-radius: 22px; padding: 36px 40px;
+    display: flex; align-items: center; gap: 28px;
+    flex-wrap: wrap;
+    box-shadow: 0 12px 40px rgba(123,45,139,0.3);
+    position: relative; overflow: hidden;
+  }
+  .rulebook-card::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .rulebook-icon {
+    font-size: 3.5rem; position: relative; z-index: 2; flex-shrink: 0;
+  }
+  .rulebook-info { flex: 1; min-width: 200px; position: relative; z-index: 2; }
+  .rulebook-title {
+    font-family: "Rajdhani", sans-serif; font-size: 1.25rem;
+    font-weight: 700; color: #fff; margin-bottom: 4px;
+  }
+  .rulebook-meta {
+    font-size: 0.78rem; color: rgba(255,255,255,0.55);
+    margin-bottom: 14px; letter-spacing: 0.3px;
+  }
+  .rulebook-points {
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .rulebook-points span {
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.8); padding: 3px 12px;
+    border-radius: 20px; font-size: 0.72rem; font-weight: 600;
+  }
+  .rulebook-btn {
+    display: flex; align-items: center; gap: 9px;
+    background: var(--accent-gold); color: #1a0000;
+    padding: 13px 26px; border-radius: 25px;
+    font-weight: 800; font-size: 0.9rem; text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 6px 20px rgba(245,166,35,0.4);
+    white-space: nowrap; position: relative; z-index: 2; flex-shrink: 0;
+  }
+  .rulebook-btn svg { width: 18px; height: 18px; }
+  .rulebook-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(245,166,35,0.55); }
+
   /* FADE */
   .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .fade-up.vis { opacity: 1; transform: translateY(0); }
@@ -318,6 +367,7 @@
     <li><a href="#timeline">Timeline</a></li>
     <li><a href="#prizes">Prizes</a></li>
     <li><a href="#judges">Judges</a></li>
+    <li><a href="#rulebook">Rulebook</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -563,6 +613,36 @@
   </div>
 </section>
 
+<!-- RULEBOOK -->
+<section id="rulebook" style="background:var(--white);padding:88px 5%;">
+  <div class="shead c fade-up">
+    <div class="stag">Official Document</div>
+    <h2 class="stitle">Download <span>Rulebook</span></h2>
+    <div class="dline c"></div>
+    <p class="ssub">Read the official Innovate 4 Impact rulebook carefully before registering. It covers eligibility, submission guidelines, evaluation criteria, and code of conduct.</p>
+  </div>
+  <div class="rulebook-card fade-up">
+    <div class="rulebook-icon">📄</div>
+    <div class="rulebook-info">
+      <div class="rulebook-title">Innovate 4 Impact — Official Rulebook</div>
+      <div class="rulebook-meta">Version 1.0 · PDF · IEEE WIE BV(DU)COE Pune</div>
+      <div class="rulebook-points">
+        <span>✦ Eligibility Criteria</span>
+        <span>✦ Team Requirements</span>
+        <span>✦ Submission Guidelines</span>
+        <span>✦ Evaluation Criteria</span>
+        <span>✦ Code of Conduct</span>
+        <span>✦ IP & Privacy Policy</span>
+      </div>
+    </div>
+    <a href="https://drive.google.com/drive/folders/1e8ukRdaYTT_jxkm5IM3Ijb4mf7mAAwRE" target="_blank" class="rulebook-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Rulebook
+    </a>
+  </div>
+  <p style="text-align:center;color:var(--text-light);font-size:0.8rem;margin-top:20px;">By participating in Innovate 4 Impact, all teams agree to abide by the rules mentioned in the rulebook.</p>
+</section>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="shead c fade-up">
@@ -691,7 +771,8 @@
         <li><a href="#rounds">Rounds</a></li>
         <li><a href="#timeline">Timeline</a></li>
         <li><a href="#prizes">Prizes</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#rulebook">Rulebook</a></li>
+    <li><a href="#faq">FAQ</a></li>
       </ul>
     </div>
     <div class="f-links">
