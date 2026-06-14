@@ -290,61 +290,41 @@
   .reg-cta-btn { display: block; width: fit-content; margin: 0 auto 14px; background: var(--accent-gold); color: #1a0000; padding: 15px 42px; border-radius: 30px; font-weight: 800; font-size: 1rem; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 6px 24px rgba(245,166,35,0.45); animation: pulse-glow 2.5s infinite; }
   .reg-cta-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(245,166,35,0.6); }
   .reg-cta-note { color: rgba(255,255,255,0.4); font-size: 0.76rem; }
-
-
-  .reg-form-embed {
-    border-radius: 16px; overflow: hidden;
-    margin: 0 -8px;
-    background: white;
-  }
+  .reg-form-embed { border-radius: 16px; overflow: hidden; margin: 0 -8px; background: white; }
   .reg-form-embed iframe { display: block; border-radius: 16px; }
+
+  /* SOCIAL MEDIA */
+  .social-links { display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+  .social-btn { display: flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 0.8rem; font-weight: 700; transition: transform 0.2s, box-shadow 0.2s; border: 1px solid rgba(255,255,255,0.15); }
+  .social-btn:hover { transform: translateY(-2px); }
+  .social-btn.instagram { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); color: white; box-shadow: 0 4px 14px rgba(131,58,180,0.35); }
+  .social-btn.linkedin { background: #0077B5; color: white; box-shadow: 0 4px 14px rgba(0,119,181,0.35); }
+  .social-btn svg { width: 16px; height: 16px; fill: white; flex-shrink: 0; }
+  .f-social-section { margin-bottom: 32px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .f-social-title { color: #fff; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
+
+  /* LEADERSHIP CARDS */
+  .leadership-card { background: var(--white); border-radius: 13px; padding: 18px 20px; border: 1.5px solid var(--border-light); }
+  .lead-row { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--border-light); }
+  .lead-row:last-child { border-bottom: none; }
+  .lead-title { font-size: 0.72rem; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; min-width: 100px; flex-shrink: 0; }
+  .lead-name { font-size: 0.88rem; font-weight: 700; color: var(--text-dark); }
+  .about-leadership { background: var(--wie-purple-pale); border-radius: 12px; padding: 16px 18px; border-left: 4px solid var(--wie-purple); margin-top: 16px; }
+  .al-row { display: flex; align-items: center; gap: 10px; padding: 5px 0; }
+  .al-title { font-size: 0.72rem; font-weight: 700; color: var(--wie-purple); text-transform: uppercase; letter-spacing: 0.5px; min-width: 100px; flex-shrink: 0; }
+  .al-name { font-size: 0.88rem; font-weight: 700; color: var(--text-dark); }
 
 
   /* RULEBOOK */
-  .rulebook-card {
-    max-width: 780px; margin: 0 auto;
-    background: linear-gradient(135deg, #1a003a 0%, #3b0764 50%, #004b78 100%);
-    border-radius: 22px; padding: 36px 40px;
-    display: flex; align-items: center; gap: 28px;
-    flex-wrap: wrap;
-    box-shadow: 0 12px 40px rgba(123,45,139,0.3);
-    position: relative; overflow: hidden;
-  }
-  .rulebook-card::before {
-    content: ''; position: absolute; inset: 0;
-    background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-    background-size: 40px 40px;
-  }
-  .rulebook-icon {
-    font-size: 3.5rem; position: relative; z-index: 2; flex-shrink: 0;
-  }
+  .rulebook-card { max-width: 780px; margin: 0 auto; background: linear-gradient(135deg, #1a003a 0%, #3b0764 50%, #004b78 100%); border-radius: 22px; padding: 36px 40px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap; box-shadow: 0 12px 40px rgba(123,45,139,0.3); position: relative; overflow: hidden; }
+  .rulebook-card::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 40px 40px; }
+  .rulebook-icon { font-size: 3.5rem; position: relative; z-index: 2; flex-shrink: 0; }
   .rulebook-info { flex: 1; min-width: 200px; position: relative; z-index: 2; }
-  .rulebook-title {
-    font-family: "Rajdhani", sans-serif; font-size: 1.25rem;
-    font-weight: 700; color: #fff; margin-bottom: 4px;
-  }
-  .rulebook-meta {
-    font-size: 0.78rem; color: rgba(255,255,255,0.55);
-    margin-bottom: 14px; letter-spacing: 0.3px;
-  }
-  .rulebook-points {
-    display: flex; flex-wrap: wrap; gap: 8px;
-  }
-  .rulebook-points span {
-    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
-    color: rgba(255,255,255,0.8); padding: 3px 12px;
-    border-radius: 20px; font-size: 0.72rem; font-weight: 600;
-  }
-  .rulebook-btn {
-    display: flex; align-items: center; gap: 9px;
-    background: var(--accent-gold); color: #1a0000;
-    padding: 13px 26px; border-radius: 25px;
-    font-weight: 800; font-size: 0.9rem; text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 6px 20px rgba(245,166,35,0.4);
-    white-space: nowrap; position: relative; z-index: 2; flex-shrink: 0;
-  }
+  .rulebook-title { font-family: "Rajdhani", sans-serif; font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .rulebook-meta { font-size: 0.78rem; color: rgba(255,255,255,0.55); margin-bottom: 14px; }
+  .rulebook-points { display: flex; flex-wrap: wrap; gap: 8px; }
+  .rulebook-points span { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); padding: 3px 12px; border-radius: 20px; font-size: 0.72rem; font-weight: 600; }
+  .rulebook-btn { display: flex; align-items: center; gap: 9px; background: var(--accent-gold); color: #1a0000; padding: 13px 26px; border-radius: 25px; font-weight: 800; font-size: 0.9rem; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 6px 20px rgba(245,166,35,0.4); white-space: nowrap; position: relative; z-index: 2; flex-shrink: 0; }
   .rulebook-btn svg { width: 18px; height: 18px; }
   .rulebook-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(245,166,35,0.55); }
 
@@ -445,7 +425,13 @@
       <div class="dline"></div>
       <p style="color:var(--text-mid);line-height:1.8;margin-bottom:18px;">Innovate 4 Impact is a <strong>national-level social impact innovation challenge</strong> organized by the IEEE Women in Engineering (WIE) Affinity Group, Bharati Vidyapeeth College of Engineering, Pune.</p>
       <p style="color:var(--text-mid);line-height:1.8;margin-bottom:18px;">The event encourages students to develop innovative, scalable, and technology-driven solutions addressing real-world societal challenges — with a focus on healthcare, women's empowerment, and smart technology.</p>
-      <p style="color:var(--text-mid);line-height:1.8;">Open to all UG students across India. At least one female team member is mandatory — because real innovation is inclusive.</p>
+      <p style="color:var(--text-mid);line-height:1.8;margin-bottom:20px;">Open to all UG students across India. At least one female team member is mandatory — because real innovation is inclusive.</p>
+      <div class="about-leadership">
+        <div style="font-size:0.75rem;font-weight:700;color:var(--wie-purple);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">College Leadership</div>
+        <div class="al-row"><span class="al-title">Principal</span><span class="al-name">Dr. Rajesh Prasad</span></div>
+        <div class="al-row"><span class="al-title">Vice Principal</span><span class="al-name">Dr. Sachin Chavan</span></div>
+        <div class="al-row"><span class="al-title">Vice Principal</span><span class="al-name">Dr. Sunita Jadhav</span></div>
+      </div>
     </div>
     <div class="about-visual fade-up">
       <div class="av-title">Key Highlights</div>
@@ -632,7 +618,7 @@
         <span>✦ Submission Guidelines</span>
         <span>✦ Evaluation Criteria</span>
         <span>✦ Code of Conduct</span>
-        <span>✦ IP & Privacy Policy</span>
+        <span>✦ IP &amp; Privacy Policy</span>
       </div>
     </div>
     <a href="https://drive.google.com/drive/folders/1e8ukRdaYTT_jxkm5IM3Ijb4mf7mAAwRE" target="_blank" class="rulebook-btn">
@@ -642,7 +628,6 @@
   </div>
   <p style="text-align:center;color:var(--text-light);font-size:0.8rem;margin-top:20px;">By participating in Innovate 4 Impact, all teams agree to abide by the rules mentioned in the rulebook.</p>
 </section>
-
 <!-- FAQ -->
 <section id="faq">
   <div class="shead c fade-up">
@@ -658,8 +643,6 @@
     <div class="faq-item fade-up"><button class="faq-q" onclick="toggleFaq(this)">Can we propose our own problem statement? <span class="faq-arrow">+</span></button><div class="faq-a">Yes! Teams may select organizer-provided problem statements or propose their own innovative idea aligned with one of the three defined themes.</div></div>
     <div class="faq-item fade-up"><button class="faq-q" onclick="toggleFaq(this)">How will official updates be communicated? <span class="faq-arrow">+</span></button><div class="faq-a">All updates will be shared via official email i.e <b> bv.innovate4impact@gmail.com </b> or from <b>arvind4z@ieee.org  </b>, and the Unstop platform. Please monitor these channels regularly.</div></div>
     <div class="faq-item fade-up"><button class="faq-q" onclick="toggleFaq(this)">What to bring for the Grand Finale? <span class="faq-arrow">+</span></button><div class="faq-a">Bring your laptops, chargers, hardware components (if applicable), extension boards, and any accessories needed for your demo. Basic infrastructure will be provided by organizers.</div></div>
-    <div class="faq-item fade-up"><button class="faq-q" onclick="toggleFaq(this)">What is the Team ID and why is it important? <span class="faq-arrow">+</span></button><div class="faq-a">After registering via the Google Form, the team leader receives a unique Team ID on their email. This ID is mandatory for Round 1 (PPT) and Round 2 (Video) submissions. Keep it safe — submissions without a valid Team ID will not be considered.</div></div>
-    <div class="faq-item fade-up"><button class="faq-q" onclick="toggleFaq(this)">How do I submit my Round 1 PPT? <span class="faq-arrow">+</span></button><div class="faq-a">After registration closes on 20 July 2026, the registration form on this website will be replaced with the Round 1 submission form. You will need your Team ID to submit. Updates will also be shared via email and the official WhatsApp group.</div></div>
   </div>
 </section>
 
@@ -676,7 +659,6 @@
       <div class="reg-cta-icon">🚀</div>
       <h3 class="reg-cta-title">Ready to Innovate?</h3>
       <p class="reg-cta-desc">Register your team using the Google Form below. It takes less than 5 minutes.</p>
-
       <div class="reg-notice-box">
         <div class="reg-notice-row">
           <span class="reg-notice-icon">📝</span>
@@ -702,16 +684,14 @@
           </div>
         </div>
       </div>
-
       <div class="reg-checklist">
-        <div class="reg-check"><span>✓</span> Team name & college details</div>
+        <div class="reg-check"><span>✓</span> Team name &amp; college details</div>
         <div class="reg-check"><span>✓</span> Member details (2–4 members)</div>
         <div class="reg-check"><span>✓</span> At least 1 female member</div>
         <div class="reg-check"><span>✓</span> Theme selection</div>
       </div>
       <div class="reg-form-embed">
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSfVK22wqURW9h6Eo2S0Rx3KqkaYkoc3n-LCDHxqy26HNDYE1g/viewform?embedded=true"
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfVK22wqURW9h6Eo2S0Rx3KqkaYkoc3n-LCDHxqy26HNDYE1g/viewform?embedded=true"
           width="100%" height="2200" frameborder="0" marginheight="0" marginwidth="0" loading="lazy">
           Loading form…
         </iframe>
@@ -731,18 +711,40 @@
   </div>
   <div class="contact-grid">
     <div class="fade-up">
-      <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.25rem;font-weight:700;margin-bottom:18px;">Organising Committee</h3>
+      <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:12px;color:var(--wie-purple);text-transform:uppercase;letter-spacing:0.5px;">Faculty Coordinators</h3>
+      <div class="c-person">
+        <div class="c-av" style="background:linear-gradient(135deg,var(--wie-purple),#9B4DB0);">RA</div>
+        <div><div class="c-name">Prof. Rupalee Ambekar</div><div class="c-det">📞 <a href="tel:+918308816838">+91 8308816838</a></div><div class="c-det">✉ <a href="mailto:rsambekar@bvucoep.edu.in">rsambekar@bvucoep.edu.in</a></div></div>
+      </div>
+      <div class="c-person">
+        <div class="c-av" style="background:linear-gradient(135deg,var(--wie-purple),#9B4DB0);">SD</div>
+        <div><div class="c-name">Dr. Sunita Dhotre</div><div class="c-det">📞 <a href="tel:+919922917341">+91 9922917341</a></div><div class="c-det">✉ <a href="mailto:ssdhotre@bvucoep.edu.in">ssdhotre@bvucoep.edu.in</a></div></div>
+      </div>
+      <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.1rem;font-weight:700;margin-top:20px;margin-bottom:12px;color:var(--wie-purple);text-transform:uppercase;letter-spacing:0.5px;">Student Coordinators</h3>
       <div class="c-person">
         <div class="c-av">AG</div>
-        <div><div class="c-name">Arvind G</div><div class="c-det">📞 <a href="tel:9661319990">9661319990</a></div><div class="c-det">✉ <a href="mailto:arvind4z@ieee.org">arvind4z@ieee.org</a></div></div>
+        <div><div class="c-name">Arvind G</div><div class="c-det">📞 <a href="tel:+919661319990">+91 9661319990</a></div><div class="c-det">✉ <a href="mailto:arvind4z@ieee.org">arvind4z@ieee.org</a></div></div>
       </div>
       <div class="c-person">
         <div class="c-av">NK</div>
-        <div><div class="c-name">Nishu Kumari</div><div class="c-det">📞 <a href="tel:9835044746">9835044746</a></div><div class="c-det">✉ <a href="mailto:nishukri_0011@ieee.org">nishukri_0011@ieee.org</a></div></div>
+        <div><div class="c-name">Nishu Kumari</div><div class="c-det">📞 <a href="tel:+919835044746">+91 9835044746</a></div><div class="c-det">✉ <a href="mailto:nishukri_0011@ieee.org">nishukri_0011@ieee.org</a></div></div>
       </div>
       <div class="email-hl">
         <label>Official Event Email</label>
         <a href="mailto:bv.innovate4impact@gmail.com">bv.innovate4impact@gmail.com</a>
+      </div>
+      <div style="margin-top:20px;">
+        <div style="font-size:0.75rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Follow Us</div>
+        <div class="social-links">
+          <a href="https://www.instagram.com/innovate.4.impact?igsh=N2dkN3lqOTV4Y2lv" target="_blank" class="social-btn instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @innovate.4.impact
+          </a>
+          <a href="https://www.linkedin.com/company/innovate4impact/" target="_blank" class="social-btn linkedin">
+            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Innovate4Impact
+          </a>
+        </div>
       </div>
     </div>
     <div class="fade-up">
@@ -750,6 +752,12 @@
         <div style="font-size:2.4rem">📍</div>
         <h4>Grand Finale Venue</h4>
         <p><strong>Bharati Vidyapeeth College of Engineering</strong><br>Pune, Maharashtra, India<br><br>Venue map and reporting details will be shared with qualified finalists closer to the date.</p>
+      </div>
+      <div class="leadership-card" style="margin-top:20px;">
+        <div style="font-family:'Rajdhani',sans-serif;font-size:1.1rem;font-weight:700;color:var(--wie-purple);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:14px;">College Leadership</div>
+        <div class="lead-row"><span class="lead-title">Principal</span><span class="lead-name">Dr. Rajesh Prasad</span></div>
+        <div class="lead-row"><span class="lead-title">Vice Principal</span><span class="lead-name">Dr. Sachin Chavan</span></div>
+        <div class="lead-row"><span class="lead-title">Vice Principal</span><span class="lead-name">Dr. Sunita Jadhav</span></div>
       </div>
     </div>
   </div>
@@ -761,7 +769,7 @@
     <div class="f-brand">
       <div class="f-logo">Innovate 4 Impact</div>
       <p>A national-level social impact hackathon by the IEEE WIE Affinity Group, Bharati Vidyapeeth (Deemed to be University) College of Engineering, Pune.</p>
-      <p style="margin-top:10px;font-size:0.75rem;color:rgba(255,255,255,0.4);">Co-organised by: ECSA | IEEE WIE BV(DU)COE, Pune · Community Partner: Rotaract Club of Pune Wisdom </p>
+      <p style="margin-top:10px;font-size:0.75rem;color:rgba(255,255,255,0.4);">Co-organised by: ECSA · Community Partner: IEEE WIE</p>
     </div>
     <div class="f-links">
       <h4>Quick Links</h4>
